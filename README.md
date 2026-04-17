@@ -56,14 +56,26 @@ The GSL engine replaces exhaustive brute-force search with:
 2. **Deterministic Vehicle Minimization:** Prioritizing fleet reduction before distance refinement.
 3. **Temporal Constraint Synchronization:** Precision handling of tight time windows without exponential complexity growth.
 
+## GSL-Solver Platform
+
+**The Enterprise Route Optimization Portal**
+Access the production-ready deterministic engine here:  
+[**https://gsl-solver.com**](https://gsl-solver.com)
+
+---
+
 ## Professional Contact
+
 **Independent Researcher:** Chonmapoohm Thamsuwan (CTSuwan)  
-**Email:** ctsuwan@proton.me  
+**Email:** [ctsuwan@proton.me](mailto:ctsuwan@proton.me)  
 
-Available for professional collaboration, high-precision routing optimization, and logistics modeling consultancy.
+---
 
+## Services & Collaboration
 
-**Service Platforms:**
-- **Upwork:** [click](https://www.upwork.com/freelancers/~0173b4a58a1a327fd6?mp_source=share)
-- **Fastwork:** [click](https://fastwork.co/user/gsl_axiomatic_engine/ai-consultant-14686934?source=app_seller-center_my-service_share-link)
+Open to professional engagement in the following areas:
+
+- **Logistics-as-a-Service (LaaS):** Real-time route optimization for enterprise fleets.
+- **High-Precision Modeling:** Custom algorithmic solutions for complex supply chain constraints.
+- **Technical Consultancy:** Large-scale network stress-testing and optimization audits.
 
