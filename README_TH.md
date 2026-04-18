@@ -56,14 +56,27 @@
 2. **Deterministic Vehicle Minimization:** การให้ความสำคัญกับการหั่นลดจำนวนยานพาหนะให้ได้ระดับ BKS ก่อนเป็นอันดับแรก 
 3. **Temporal Constraint Synchronization:** การจัดการกรอบเวลา (Time Windows) อย่างแม่นยำ โดยไม่ทำให้ความซับซ้อนของคณิตศาสตร์เพิ่มขึ้นทวีคูณ
 
-## ข้อมูลการติดต่อ (Professional Contact)
-**นักวิจัยอิสระ:** Chonmapoohm Thamsuwan (CTSuwan)  
-**อีเมล:** ctsuwan@proton.me  
+## แพลตฟอร์ม GSL-Solver
 
-เปิดรับความร่วมมือทางวิชาชีพ การปรับปรุงเส้นทางด้วยความแม่นยำสูง และการให้คำปรึกษาด้านการจำลองแบบโลจิสติกส์
+**พอร์ทัลอัปติไมซ์เส้นทางระดับองค์กร (Enterprise Route Optimization Portal)**
+เข้าใช้งานเอนจิน Deterministic ระดับโปรดักชันที่พร้อมใช้งานจริงได้ที่นี่:  
+[**https://gsl-solver.com**](https://gsl-solver.com)
 
-*ช่องทางจ้างงาน:**
-- **Upwork:** [https://www.upwork.com/freelancers/~0173b4a58a1a327fd6?mp_source=share]
-- **Fastwork:** [https://fastwork.co/user/gsl_axiomatic_engine/ai-consultant-14686934?source=app_seller-center_my-service_share-link]
+---
+
+## ข้อมูลการติดต่อ
+
+**นักวิจัยอิสระ (Independent Researcher):** ชนม์ภูมิ ธรรมสุวรรณ (CTSuwan)  
+**อีเมล:** [ctsuwan@proton.me](mailto:ctsuwan@proton.me)  
+
+---
+
+## บริการและความร่วมมือทางธุรกิจ
+
+เปิดรับการร่วมงานและให้คำปรึกษาระดับมืออาชีพ ในขอบเขตดังต่อไปนี้:
+
+- **Logistics-as-a-Service (LaaS):** บริการระบบประมวลผลเส้นทางแบบเรียลไทม์สำหรับฟลีทรถขนส่งระดับองค์กร
+- **High-Precision Modeling:** การออกแบบและพัฒนาอัลกอริทึมเฉพาะทาง สำหรับแก้ปัญหาซัพพลายเชนที่มีเงื่อนไข (Constraints) ซับซ้อนขั้นสูง
+- **Technical Consultancy:** บริการให้คำปรึกษาทางเทคนิค, ทดสอบขีดจำกัดระบบเครือข่ายขนาดใหญ่ (Stress-testing) และการตรวจสอบประเมินประสิทธิภาพการจัดเส้นทาง (Optimization audits)
 
 - 
