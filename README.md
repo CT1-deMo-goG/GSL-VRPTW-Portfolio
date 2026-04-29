@@ -79,4 +79,4 @@ Open to professional engagement in the following areas:
 - **Logistics-as-a-Service (LaaS):** Real-time route optimization for enterprise fleets.
 - **High-Precision Modeling:** Custom algorithmic solutions for complex supply chain constraints.
 - **Technical Consultancy:** Large-scale network stress-testing and optimization audits.
-- 
+  
