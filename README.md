@@ -57,6 +57,19 @@ The GSL engine replaces exhaustive brute-force search with:
 2. **Deterministic Vehicle Minimization:** Prioritizing fleet reduction before distance refinement.
 3. **Temporal Constraint Synchronization:** Precision handling of tight time windows without exponential complexity growth.
 
+#### *APPENDIX: The Mobile-Edge ALNS Baseline Specification*
+To address the operational constraints of edge computing (Pydroid 3), the ALNS baseline used in this comparative study was deliberately designed as a **Lightweight High-Speed Variant**. 
+
+While theoretical ALNS models utilize extensive operator arrays (Shaw, Regret, etc.) and run for thousands of iterations, they are computationally unviable for real-time mobile execution. 
+
+Our baseline configuration prioritizes execution speed to match the operational window of the GSL Engine:
+* **Destruction Operator:** Random Removal (15% rate) to introduce immediate entropy.
+* **Repair Operator:** Greedy Insertion for rapid, cost-effective reconstruction.
+* **Acceptance Criteria:** Strict Hill-Climbing (accepts only immediate improvements) to prevent computational drag.
+* **Iteration Cap:** 150 cycles. 
+
+**Conclusion:** The benchmark explicitly demonstrates that a structurally sound, single-pass deterministic engine (GSL) drastically outperforms a rapid-stochastic model in both K-minimization and runtime within the same hardware constraints.
+
 ## GSL-Solver Platform
 
 **The Enterprise Route Optimization Portal**
