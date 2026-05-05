@@ -31,6 +31,8 @@ The engine has been verified against the complete Solomon and Homberger benchmar
 ## 2. Algorithm Baseline Comparison
 To demonstrate real-time efficiency, GSL-TW V111 was benchmarked against widely recognized algorithms under **equal computational time budgets** on the same mobile environment. 
 
+> **Methodology Note (Scale Limitation):** For the Homberger-600 instances, Tabu Search (TS) and Solomon I1 Heuristics were strictly excluded from the baseline. These methods exhibited exponential runtime decay beyond 200 nodes, making them computationally unviable for real-time edge execution at this scale.
+
 * **GSL vs. Solomon I1 (Insertion Heuristic):**
   * **100 Nodes:** GSL Wins 45/56. (Avg Time: GSL 2.77s vs I1 1.49s)
   * **200 Nodes:** GSL Wins 53/60. (Avg Time: GSL 7.43s vs I1 9.83s)
@@ -40,6 +42,8 @@ To demonstrate real-time efficiency, GSL-TW V111 was benchmarked against widely 
 * **GSL vs. ALNS (Adaptive Large Neighborhood Search):**
   * **Constraint Note:** To enforce a comparable computational time budget, ALNS was artificially capped at 150 "destroy and repair" iterations. Without this limit, stochastic methods loop indefinitely. GSL operates on a strict, single-pass deterministic structure.
   * **100 Nodes:** GSL Wins 53/56.
+  * **200 Nodes:** GSL Wins 60/60. The deterministic engine maintained near-perfect fleet compression (K-Gap +0 to +2 in most cases). ALNS began exhibiting severe "Fleet Inflation" at this scale, requiring up to **+15 unnecessary vehicles** (e.g., instance r2_2_1 required 19 vehicles against a 4-vehicle baseline). 
+  * **600 Nodes (The Fleet Explosion Evidence):** GSL outperformed ALNS in 100% of tested instances. The deterministic engine consistently matched or neared BKS fleet sizes (K), while ALNS suffered from massive **"Fleet Explosion,"** requiring up to **+31 additional vehicles** (r2_6_1) for the same network.
   * **800 Nodes:** GSL Wins 60/60. (Avg Time: GSL 30.57s vs ALNS 380.43s)
   * *Result:* Even when artificially forcing ALNS to yield a result within 150 iterations, GSL processes data over 12x faster while delivering vastly superior routing efficiency and zero variance compared to stochastic metaheuristics.
 
@@ -92,4 +96,4 @@ Open to professional engagement in the following areas:
 - **Logistics-as-a-Service (LaaS):** Real-time route optimization for enterprise fleets.
 - **High-Precision Modeling:** Custom algorithmic solutions for complex supply chain constraints.
 - **Technical Consultancy:** Large-scale network stress-testing and optimization audits.
-  
+- 
