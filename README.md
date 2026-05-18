@@ -1,4 +1,4 @@
-# GSL-TW V111: High-Performance Deterministic VRPTW Solver
+# GSL-TW V111: High-Performance VRPTW Solver Based on Deterministic Combinatorial Optimization Architecture
 
 [อ่านภาษาไทยคลิกที่นี่](README_TH.md)
 
@@ -22,7 +22,7 @@ The engine has been verified against the complete Solomon and Homberger benchmar
 | **Solomon-100** | Small (100 nodes) | 46.4% | ~2.78 s |
 | **Solomon-200** | Mid (200 nodes) | 51.7% | ~7.57 s |
 | **Homberger-400** | Large (400 nodes) | 35.0% | ~20.0 s |
-| **Homberger-600** | Large (600 nodes) | 30.0% | ~29.20 s |
+| **Homberger-600** | Large (600 nodes) | 30.0 | ~29.20 s |
 | **Homberger-800** | Massive (800 nodes) | 35.0% | ~31.15 s |
 | **Homberger-1000** | Massive (1,000 nodes) | 21.6% | ~38.22 s |
 
@@ -40,7 +40,7 @@ To demonstrate real-time efficiency, GSL-TW V111 was benchmarked against widely 
   * *Result:* GSL perfectly scales linearly, completely outperforming standard heuristics in large datasets.
 
 * **GSL vs. ALNS (Adaptive Large Neighborhood Search):**
-  * **Constraint Note:** To enforce a comparable computational time budget, ALNS was artificially capped at 150 "destroy and repair" iterations. Without this limit, stochastic methods loop indefinitely. GSL operates on a strict, single-pass deterministic structure.
+  * **Constraint Note:** To enforce a comparable computational time budget, ALNS was artificially capped at 150 "destroy and repair" iterations. Without this limit, stochastic methods loop indefinitely. GSL operates on a highly optimized deterministic infrastructure.
   * **100 Nodes:** GSL Wins 53/56.
   * **200 Nodes:** GSL Wins 60/60. The deterministic engine maintained near-perfect fleet compression (K-Gap +0 to +2 in most cases). ALNS began exhibiting severe "Fleet Inflation" at this scale, requiring up to **+15 unnecessary vehicles** (e.g., instance r2_2_1 required 19 vehicles against a 4-vehicle baseline). 
   * **600 Nodes (The Fleet Explosion Evidence):** GSL outperformed ALNS in 100% of tested instances. The deterministic engine consistently matched or neared BKS fleet sizes (K), while ALNS suffered from massive **"Fleet Explosion,"** requiring up to **+31 additional vehicles** (r2_6_1) for the same network.
@@ -49,30 +49,9 @@ To demonstrate real-time efficiency, GSL-TW V111 was benchmarked against widely 
 
 * **GSL vs. Tabu Search (TS):**
   * **100 Nodes:** GSL Wins 54/56. (Avg Time: GSL 2.77s vs TS 139.90s)
-  * *Result:* Trajectory-based methods like TS are proven to be too computationally heavy ($O(N^3)$) for edge deployment, operating 50x slower than GSL.
+  * *Result:* Trajectory-based methods like TS are proven to be too computationally heavy ($O(N^3)$) for edge deployment, operating over 50x slower than GSL.
 
 📂 **[Click here to view detailed CSV reports for all comparative benchmarks](./Comparative_Benchmarks)**
-
----
-
-## Technical Strategy & Architecture
-The GSL engine replaces exhaustive brute-force search with:
-1. **Geometric Sensing:** Pinpointing high-quality initial clusters based on spatial rules.
-2. **Deterministic Vehicle Minimization:** Prioritizing fleet reduction before distance refinement.
-3. **Temporal Constraint Synchronization:** Precision handling of tight time windows without exponential complexity growth.
-
-#### *APPENDIX: The Mobile-Edge ALNS Baseline Specification*
-To address the operational constraints of edge computing (Pydroid 3), the ALNS baseline used in this comparative study was deliberately designed as a **Lightweight High-Speed Variant**. 
-
-While theoretical ALNS models utilize extensive operator arrays (Shaw, Regret, etc.) and run for thousands of iterations, they are computationally unviable for real-time mobile execution. 
-
-Our baseline configuration prioritizes execution speed to match the operational window of the GSL Engine:
-* **Destruction Operator:** Random Removal (15% rate) to introduce immediate entropy.
-* **Repair Operator:** Greedy Insertion for rapid, cost-effective reconstruction.
-* **Acceptance Criteria:** Strict Hill-Climbing (accepts only immediate improvements) to prevent computational drag.
-* **Iteration Cap:** 150 cycles. 
-
-**Conclusion:** The benchmark explicitly demonstrates that a structurally sound, single-pass deterministic engine (GSL) drastically outperforms a rapid-stochastic model in both K-minimization and runtime within the same hardware constraints.
 
 ## GSL-Solver Platform
 
@@ -92,8 +71,8 @@ Access the production-ready deterministic engine here:
 ## Services & Collaboration
 
 Open to professional engagement in the following areas:
-
 - **Logistics-as-a-Service (LaaS):** Real-time route optimization for enterprise fleets.
 - **High-Precision Modeling:** Custom algorithmic solutions for complex supply chain constraints.
 - **Technical Consultancy:** Large-scale network stress-testing and optimization audits.
 - 
+
